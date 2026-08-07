@@ -57,7 +57,7 @@ jobs:
       - name: Run database migrations
         run: npm run db:migrate
         env:
-          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/logs_db
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/logs
 
 
       - name: Build TypeScript
