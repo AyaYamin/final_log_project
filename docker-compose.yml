@@ -1,0 +1,49 @@
+
+
+services:
+
+  app:
+
+    build: .
+
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      db:
+        condition: service_healthy
+
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/logs
+      PORT: 8080
+      LOG_RETENTION_DAYS: 30
+      RETENTION_INTERVAL: 10000
+      NODE_ENV: production
+
+    healthcheck:
+       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:8080/health"]
+       interval: 30s
+       timeout: 5s
+       retries: 5
+       start_period: 20s
+
+
+  db:
+
+    image: postgres:17
+
+    restart: always
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: logs
+
+    ports:
+      - "5432:5432"
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+coverage/
+*.log
+
+# k6 local installation
+k6-v2.0.0-linux-amd64/
+k6-v2.0.0-linux-amd64.tar.gz

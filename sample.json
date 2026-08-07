@@ -1,0 +1,23 @@
+{
+  "logs": [
+    {
+      "timestamp": "2026-08-03T10:00:00Z",
+      "level": "info",
+      "service": "checkout",
+      "message": "payment created",
+      "attributes": {
+        "user_id": "42",
+        "region": "eu"
+      }
+    },
+    {
+      "timestamp": "2026-08-03T10:01:00Z",
+      "level": "error",
+      "service": "auth",
+      "message": "login failed",
+      "attributes": {
+        "user_id": "15"
+      }
+    }
+  ]
+}

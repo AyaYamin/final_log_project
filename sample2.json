@@ -1,0 +1,31 @@
+{
+  "logs": [
+    {
+      "timestamp": "2026-08-03T10:02:00Z",
+      "level": "info",
+      "service": "checkout",
+      "message": "order placed",
+      "attributes": {
+        "user_id": "50"
+      }
+    },
+    {
+      "timestamp": "2026-08-03T10:03:00Z",
+      "level": "warn",
+      "service": "auth",
+      "message": "password retry",
+      "attributes": {
+        "user_id": "51"
+      }
+    },
+    {
+      "timestamp": "2026-08-03T10:04:00Z",
+      "level": "error",
+      "service": "payment",
+      "message": "card declined",
+      "attributes": {
+        "user_id": "52"
+      }
+    }
+  ]
+}
