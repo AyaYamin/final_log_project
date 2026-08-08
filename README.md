@@ -303,13 +303,14 @@ WHERE timestamp > '2026-08-01'
 
 ##  Level Index
 
-Index:logs_level_idx
+Index: ```logs_level_idx```
 
 Purpose:
 - Improves filtering by log severity.
 - Example query:
       ```sql 
-      WHERE level = 'error'```
+      WHERE level = 'error'
+      ```
 
 ## Service Index
 
