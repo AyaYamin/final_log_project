@@ -287,7 +287,8 @@ The database contains indexes to improve query performance and reduce query exec
 
 ## Timestamp Index
 
-Index: logs_timestamp_idx
+Index: 
+``` logs_timestamp_idx```
 
 Purpose:
 
@@ -307,22 +308,27 @@ Index:logs_level_idx
 Purpose:
 - Improves filtering by log severity.
 - Example query:
-       ```WHERE level = 'error'```
+      ```sql 
+      WHERE level = 'error'```
 
 ## Service Index
 
-Index:logs_service_idx
+Index:
+``` logs_service_idx```
 
 Purpose:
 - Improves filtering by application service.
 - Example query:
- ```WHERE service = 'auth'```
+ ```sql 
+  WHERE service = 'auth'
+  ```
 
 ## Composite Indexes 
 
 # Service + Timestamp
 
-Index: logs_service_timestamp_idx
+Index: 
+``` logs_service_timestamp_idx```
 
 - Optimizes queries that combine service filtering with time ordering.
 - Example:
@@ -334,10 +340,7 @@ ORDER BY timestamp
 # Level + Timestamp
 
 Index:
-
-```
-logs_level_timestamp_idx
-```
+```logs_level_timestamp_idx```
 
 - Purpose: Optimizes queries that filter by level and sort by timestamp.
 - Example query:
@@ -725,6 +728,7 @@ dist/
 ```
 
 The exact generated files depend on the TypeScript source structure.
+
 ---
 
 # 14. Production Docker Stage
@@ -1041,6 +1045,7 @@ docker compose down
 ```
 
 Confirm that the application shuts down without database/resource errors.
+
 ---
 
 # 21. Final Project Summary
