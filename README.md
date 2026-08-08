@@ -308,9 +308,9 @@ Index: ```logs_level_idx```
 Purpose:
 - Improves filtering by log severity.
 - Example query:
-      ```sql 
+```sql 
       WHERE level = 'error'
-      ```
+```
 
 ## Service Index
 
